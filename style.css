@@ -1,0 +1,150 @@
+
+:root{
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --ff-primary: 'Lexend Deca', sans-serif;
+  --fw-primary: 400;
+
+  --ff-secondary:'Big Shoulders Display', cursive;
+  --fw-secondary:700;
+
+  --fcolor-transparent-white:hsla(0, 0%, 100%, 0.75);
+  --fcolor-others:hsl(0, 0%, 95%);
+
+}
+
+
+/* my css */
+body{
+  background: var(--fcolor-others);
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary);
+  
+}
+
+main{
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+ /* making the wrapper class display as grid  */
+ .wrapper{
+  
+  display: grid;
+  margin: 5rem;
+  gap: 0;
+  grid-template-columns: repeat(3,1fr);
+  border-radius: 12px;
+  overflow: hidden;
+  /* height: 50vh; */
+}
+
+.box h3{
+  color: var(--fcolor-transparent-white);
+  text-transform: uppercase;
+  
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-secondary);
+  font-size: 2rem;
+  line-height: 2em;
+  
+}
+
+.wrapper p{
+  color:var(--fcolor-others);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary);
+  line-height: 1.6em;
+}
+
+.box{
+  padding: 2em;
+}
+
+.btn{
+  background: var(--fcolor-others);
+  border: 2px solid var(--fcolor-transparent-white);
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin-top: 2.8em;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.btn a{
+  text-decoration: none;
+}
+  /* background: var(--fcolor-others);
+  padding: 1em 1em;
+  border-radius: 30px; */
+  /* margin: 4em; */
+  /* margin-left: 0; */
+  /* margin-bottom: 4em; */
+  /* display: inline-block; */
+
+
+.btn:hover{
+ background-color: transparent;
+  /* border: 2px solid var(--fcolor-transparent-white); */
+ 
+}
+
+a:hover{
+  color: var(--fcolor-transparent-white) !important;
+}
+/* section 1 */
+.section1{
+  background: var(--Bright-orange);
+}
+
+.section1 .btn a{
+  color: var(--Bright-orange);
+}
+
+/* section 2 */
+.section2{
+  background:var(--Dark-cyan);
+}
+
+.section2 .btn a{
+  color: var(--Dark-cyan);
+}
+
+/* section 3 */
+.section3{
+  background: var(--Very-dark-cyan);
+}
+
+.section3 .btn a{
+  color: var(--Very-dark-cyan);
+}
+
+/* footer as given as default */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper {
+        margin: 2rem .5rem;
+    }
+}
